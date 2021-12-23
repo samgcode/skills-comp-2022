@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import './index.css';
-import App from './App';
+import Home from './pages/Home'
+
+import Navbar from './components/navbar/Navbar';
+import TailwindSizingDisplay from './components/TailwindSizingDisplay';
 
 if (module.hot) {
   module.hot.accept();
@@ -11,7 +15,14 @@ if (module.hot) {
 
 ReactDOM.render(
   <React.StrictMode>
-    <App/>
+    <BrowserRouter>
+      <Navbar />
+      <TailwindSizingDisplay />
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route exact path='/Home' element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
