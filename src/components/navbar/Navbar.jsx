@@ -14,7 +14,7 @@ function Navbar() {
         <div className="bg-white mt-8 w-full h-16 flex md:justify-between justify-end md:rounded md:w-3/4">
           <div className="text-black text-center align-middle my-auto md:block hidden ">
             <Link to="/Home" className="mx-5">Home</Link>
-            <Link to="/Home" className="mx-5">Home</Link>
+            <Link to="/Store" className="mx-5">Store</Link>
             <Link to="/Home" className="mx-5">Home</Link>
             <Link to="/Home" className="mx-5">Home</Link>
           </div>
@@ -28,7 +28,7 @@ function Navbar() {
         {open ?
           <div className="w-full flex flex-col text-black align-middle z-50 my-auto bg-whiterounded-b md:hidden">
             <Link to="/Home" className="mx-5 my-2">Home</Link>
-            <Link to="/Home" className="mx-5 my-2">Home</Link>
+            <Link to="/Store" className="mx-5 my-2">Store</Link>
             <Link to="/Home" className="mx-5 my-2">Home</Link>
             <Link to="/Home" className="mx-5 my-2">Home</Link>
           </div>

@@ -8,6 +8,7 @@ import Home from './pages/Home'
 
 import Navbar from './components/navbar/Navbar';
 import TailwindSizingDisplay from './components/TailwindSizingDisplay';
+import Store from './pages/Store';
 
 if (module.hot) {
   module.hot.accept();
@@ -21,6 +22,7 @@ ReactDOM.render(
       <Routes>
         <Route exact path='/' element={<Home />} />
         <Route exact path='/Home' element={<Home />} />
+        <Route exact path='/Store' element={<Store />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
