@@ -15,13 +15,13 @@
         <div class="px-4 py-4">
           <div class="flex">
             <h1 class="text-xl pr-3">{{ review.name }}</h1>
-            <star-rating
+            <!-- <star-rating
               class=""
               :read-only="true"
               :show-rating="false"
               :rating="rating"
               :star-size="23"
-            ></star-rating>
+            ></star-rating> -->
           </div>
           <p class="text-gray-500 text-sm">
             {{ review.text }}
@@ -34,7 +34,7 @@
 
 
 <script>
-import StarRating from "vue-star-rating";
+// import StarRating from "vue-star-rating";
 // import Colors from "../../colors";
 
 export default {
@@ -43,7 +43,7 @@ export default {
     review: Object,
   },
   components: {
-    StarRating,
+    // StarRating,
   },
   data() {
     return {

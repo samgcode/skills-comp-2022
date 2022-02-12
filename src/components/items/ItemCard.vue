@@ -31,7 +31,7 @@
 
 <script>
 // import serviceLocator from "@/services/serviceLocator"
-import StarRating from "vue-star-rating"
+// import StarRating from "vue-star-rating"
 // import Colors from "../../colors"
 // const colors = new Colors()
 // const reviewService = serviceLocator.services.reviewService
@@ -42,7 +42,7 @@ export default {
     item: Object,
   },
   components: {
-    StarRating,
+    // StarRating,
   },
   data() {
     return {

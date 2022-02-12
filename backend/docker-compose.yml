@@ -1,0 +1,18 @@
+version: '3'
+services:
+    mongo:
+        ports: 
+            - "27017:27017"
+        volumes: 
+            - mongoData:/data/db
+        image: mongo
+    # frontend:
+    #     build: ./frontend
+    #     ports:
+    #         - "8080:80"
+    #     environment: 
+    #         HOST_NAME: backend
+    #     image: samgcode/skills-comp_frontend:1.0
+
+volumes: 
+    mongoData:
