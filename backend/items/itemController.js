@@ -6,7 +6,7 @@ class ItemController {
         this._reviewController = serviceLocator.controllers.reviewController;	
     }	
 
-    async getItems(req, res, next) {	
+    async getItems(req, res, next) {
         setTimeout(async() => {	
             try {	
                 const items = await this._itemsRepository.getItems();

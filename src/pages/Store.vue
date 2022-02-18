@@ -1,5 +1,7 @@
 <template>
   <div>
+      <loading :loading="loading" class='pt-5'></loading>
+      <error-display :error="error" :show="errorOccured"></error-display>
     <div
       class="
         grid grid-cols-1
@@ -28,8 +30,9 @@
 </template>
 
 <script>
-import itemData from "../assets/items.json"
 import reviewData from "../assets/reviews.json"
+import Loading from '../components/spinners/Loading.vue'
+import ErrorDisplay from '../components/Error/ErrorDisplay.vue'
 import ItemCard from "../components/items/ItemCard.vue"
 import ReviewModal from "../components/Reviews/ReviewModal.vue"
 import serviceLocator from '../services/serviceLocator'
@@ -42,8 +45,8 @@ export default {
   components: {
     ItemCard,
     ReviewModal,
-    // ErrorDisplay,
-    // SquareSpinner
+    ErrorDisplay,
+    Loading
   },
   data() {
     return {
@@ -87,7 +90,6 @@ export default {
       this.reviewsLoading = true
     },
     async getItems() {
-      this.items = itemData
       try {
           this.loading = true
           this.items = await itemService.getItems()
