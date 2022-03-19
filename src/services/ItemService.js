@@ -1,17 +1,36 @@
-import axios from 'axios'
+import { getDocs, addDoc } from 'firebase/firestore/lite'
+
+import itemData from '../assets/items.json'
 
 class ItemService {
   constructor(serviceLocator) {
-    // this._collection = serviceLocator.collections.itemsCollection
+    this._db = serviceLocator.collections.db
+    this._collection = serviceLocator.collections.items
     // this._imageService = serviceLocator.services.imageService
+    this.populateDatabase()
   }
 
   async getItems() {
-    const response = await axios.get('http://localhost:3001/items')
-    const convertedItems = response.data.map(item => {
+    const itemSnapshot = await getDocs(this._collection)
+    const items = itemSnapshot.docs.map(doc => doc.data())
+
+    const convertedItems = items.map(item => {
       return this._convertItem(item)
     })
     return convertedItems
+  }
+
+  async populateDatabase() {
+    const itemSnapshot = await getDocs(this._collection)
+    if (!itemSnapshot.docs[0]) {
+      itemData.forEach(item => {
+        this.addItem(item)
+      })
+    }
+  }
+
+  async addItem(item) {
+    await addDoc(this._collection, { ...item })
   }
 
   _convertItem(item) {

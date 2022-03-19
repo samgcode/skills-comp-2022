@@ -1,13 +1,10 @@
-// import getCollections from './setupStitchDB'
+import { collections } from './setupFirebase'
 import ItemService from './ItemService'
 
 const serviceLocator = {
-  collections: {},
+  collections: collections,
   services: {},
 }
-
-// serviceLocator.collections = await getCollections()
-// console.log(serviceLocator.collections)
 
 serviceLocator.services['itemService'] = new ItemService(serviceLocator)
 
