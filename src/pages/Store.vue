@@ -1,7 +1,7 @@
 <template>
   <div>
-      <loading :loading="loading" class='pt-5'></loading>
-      <error-display :error="error" :show="errorOccured"></error-display>
+    <loading :loading="loading" class="pt-5"></loading>
+    <error-display :error="error" :show="errorOccured"></error-display>
     <div
       class="
         grid grid-cols-1
@@ -14,7 +14,12 @@
         mt-6
       "
     >
-      <item-card  v-for="item in items" v-bind:key="item.id" v-bind:item="item"></item-card>
+      <item-card
+        v-for="item in items"
+        v-bind:key="item.id"
+        v-bind:item="item"
+        @show="getReviews"
+      ></item-card>
     </div>
     <ReviewModal
       @close="closeModal"
@@ -30,14 +35,14 @@
 </template>
 
 <script>
-import reviewData from "../assets/reviews.json"
-import Loading from '../components/spinners/Loading.vue'
-import ErrorDisplay from '../components/Error/ErrorDisplay.vue'
-import ItemCard from "../components/items/ItemCard.vue"
-import ReviewModal from "../components/Reviews/ReviewModal.vue"
-import serviceLocator from '../services/serviceLocator'
+import Loading from "../components/spinners/Loading.vue";
+import ErrorDisplay from "../components/Error/ErrorDisplay.vue";
+import ItemCard from "../components/items/ItemCard.vue";
+import ReviewModal from "../components/Reviews/ReviewModal.vue";
+import serviceLocator from "../services/serviceLocator";
 
-const itemService = serviceLocator.services.itemService
+const itemService = serviceLocator.services.itemService;
+const reviewService = serviceLocator.services.reviewService;
 
 export default {
   name: "Store",
@@ -46,14 +51,14 @@ export default {
     ItemCard,
     ReviewModal,
     ErrorDisplay,
-    Loading
+    Loading,
   },
   data() {
     return {
       showReviews: false,
       item: {},
       items: [],
-      reviews: reviewData,
+      reviews: [],
       hasReviews: false,
       error: {
         statusCode: "404",
@@ -65,54 +70,61 @@ export default {
       reviewErrorOccured: false,
       loading: true,
       reviewsLoading: true,
-    }
+    };
   },
   methods: {
-    showModal(itemName, itemId) {
-      this.hasReviews = false
-      this.showReviews = true
+    async getReviews(itemName, itemId) {
+      this.hasReviews = false;
+      this.showReviews = true;
+      this.reviewsLoading = true;
       this.item = {
         name: itemName,
         id: itemId,
-      }
-    },
-    displayReviews(reviews) {
-      this.reviewsLoading = false
-      this.reviews = reviews
-      if (this.reviews.length > 0) {
-        this.hasReviews = true
-      } else {
-        this.hasReviews = false
+      };
+      try {
+        this.reviews = await reviewService.getReviews()
+        this.reviewsLoading = false
+        if (this.reviews.length > 0) {
+          this.hasReviews = true;
+        } else {
+          this.hasReviews = false;
+        }
+      } catch (err) {
+        this.reviewsLoading = false
+        this.reviewErrorOccured = true
+        this.reviewError = {
+          message: 'Error occured while trying to fetch reviews'
+        }
       }
     },
     closeModal() {
-      this.showReviews = false
-      this.reviewsLoading = true
+      this.showReviews = false;
+      this.reviewsLoading = true;
     },
     async getItems() {
       try {
-          this.loading = true
-          this.items = await itemService.getItems()
-          this.loading = false
-      } catch(err) {
-          this.loading = false
-          this.errorOccured = true
-          this.error = {
-              message: 'error occured while trying to fetch items',
-          }
-          console.log(err)
+        this.loading = true;
+        this.items = await itemService.getItems();
+        this.loading = false;
+      } catch (err) {
+        this.loading = false;
+        this.errorOccured = true;
+        this.error = {
+          message: "error occured while trying to fetch items",
+        };
+        console.log(err);
       }
     },
     onReviewError(err) {
-      this.reviewsLoading = false
-      this.hasReviews = false
-      this.reviewErrorOccured = true
-      this.reviewError = err
-      console.log(err)
+      this.reviewsLoading = false;
+      this.hasReviews = false;
+      this.reviewErrorOccured = true;
+      this.reviewError = err;
+      console.log(err);
     },
   },
   mounted() {
-    this.getItems()
+    this.getItems();
   },
-}
+};
 </script>

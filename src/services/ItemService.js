@@ -4,9 +4,7 @@ import itemData from '../assets/items.json'
 
 class ItemService {
   constructor(serviceLocator) {
-    this._db = serviceLocator.collections.db
     this._collection = serviceLocator.collections.items
-    // this._imageService = serviceLocator.services.imageService
     this.populateDatabase()
   }
 

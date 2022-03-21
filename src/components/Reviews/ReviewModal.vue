@@ -93,6 +93,8 @@
           >
             <!-- <error-display :error="error" :show="showError"></error-display>
             <square-spinner :loading="loading"></square-spinner> -->
+            <error-display :error="error" :show="showError"></error-display>
+            <loading :loading="loading" class="pt-5"></loading>
             <div v-if="!showError">
               <div v-if="hasReviews">
                 <review-card
@@ -159,8 +161,7 @@
               border-4 border-secondary
               transform
               transition
-              hover:-translate-y-0.5
-              hover:bg-secondary-superlight
+              hover:-translate-y-0.5 hover:bg-secondary-superlight
               focus:-translate-y-0.5
               focus:outline-none
               focus:ring
@@ -210,6 +211,8 @@
 
 <script>
 import ReviewCard from "../../components/Reviews/ReviewCard.vue";
+import Loading from "../../components/spinners/Loading.vue";
+import ErrorDisplay from "../../components/Error/ErrorDisplay.vue";
 
 export default {
   name: "ReviewModal",
@@ -224,6 +227,8 @@ export default {
   },
   components: {
     ReviewCard,
+    Loading,
+    ErrorDisplay,
   },
   data() {
     return {};

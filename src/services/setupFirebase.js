@@ -7,6 +7,6 @@ const app = initializeApp(firebaseConfig)
 const db = getFirestore(app)
 
 export const collections = {
-  db: db,
-  items: collection(db, 'Items')
+  items: collection(db, 'Items'),
+  reviews: collection(db, 'Reviews')
 }
