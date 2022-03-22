@@ -19,6 +19,7 @@
         v-bind:key="item.id"
         v-bind:item="item"
         @show="getReviews"
+        data-aos="fade-up"
       ></item-card>
     </div>
     <ReviewModal
