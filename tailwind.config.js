@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      width: {
+        '2xl': '600px',
+      },
       colors: {
         primary: {
           superlight: '#66ff8a',
@@ -19,6 +22,9 @@ module.exports = {
           DEFAULT: '#3b83f6',
           dark: '#3375de'
         }
+      },
+      borderWidth: {
+        '3': '3px'
       }
     },
   },

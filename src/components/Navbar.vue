@@ -6,7 +6,7 @@
           <div class="text-black text-center align-middle my-auto md:block hidden ">
             <router-link to="/Home" class="px-5">Home</router-link>
             <router-link to="/Store" class="px-5">Store</router-link>
-            <router-link to="/Home" class="px-5">Home</router-link>
+            <router-link to="/Contact" class="px-5">Contact us</router-link>
             <router-link to="/Home" class="px-5">Home</router-link>
           </div>
           <button class="w-6 h-6 my-auto text-black mx-5 md:hidden"  @click="open = !open">
@@ -17,7 +17,7 @@
           <div v-if="open" class="w-full flex flex-col text-black align-middle z-50 my-auto bg-whiterounded-b md:hidden">
             <router-link to="/Home" class="mx-5 my-2">Home</router-link>
             <router-link to="/Store" class="mx-5 my-2">Store</router-link>
-            <router-link to="/Home" class="mx-5 my-2">Home</router-link>
+            <router-link to="/Contact" class="mx-5 my-2">Contact us</router-link>
             <router-link to="/Home" class="mx-5 my-2">Home</router-link>
           </div>
       </nav>
