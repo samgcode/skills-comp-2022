@@ -2,30 +2,37 @@
   <div class="flex justify-center" data-aos="fade-up">
     <div class="flex max-w-8xl">
       <div class="p-10">
-        <div
-          class="
-            max-w-8xl
-            min-w-7xl
-            rounded-lg
-            overflow-hidden
-            shadow-lg
-          "
-        >
+        <div class="max-w-8xl min-w-7xl rounded-lg overflow-hidden shadow-lg">
           <div class="px-8 pt-8">
             <h1 class="text-3xl">Contact RapidAir</h1>
-            <p class="text-white text-lg">
+            <p class="text-white">
               Please use the form to send us your message or ideas. Or simply
               pop in and say, hi!
             </p>
           </div>
           <!-- <hr class="border-primary border-3" /> -->
-          <div class="text-xl  px-4 bg-white max-w-full">
+          <div class="text-xl px-4 bg-white max-w-full">
             <form @submit.prevent="submitForm()" @change="validateForm">
               <div class="mb-4">
                 <label class="form-label" for="name"> Name </label>
                 <span class="sr-only">name input</span>
                 <input
-                  class="w-full md:max-w-3xl sm:max-w-xl max-w-sm shadow-md appearance-none border rounded py-2 px-3 text-gray-700 leading-tight transform transition"
+                  class="
+                    w-full
+                    md:max-w-3xl
+                    sm:max-w-xl
+                    max-w-sm
+                    shadow-md
+                    appearance-none
+                    border
+                    rounded
+                    py-2
+                    px-3
+                    text-gray-700
+                    leading-tight
+                    transform
+                    transition
+                  "
                   id="name"
                   type="text"
                   placeholder="Name"
@@ -37,7 +44,22 @@
                 <label class="form-label" for="email"> Email </label>
                 <span class="sr-only">email input</span>
                 <input
-                  class="w-full md:max-w-3xl sm:max-w-xl max-w-sm shadow-md appearance-none border rounded py-2 px-3 text-gray-700 leading-tight transform transition"
+                  class="
+                    w-full
+                    md:max-w-3xl
+                    sm:max-w-xl
+                    max-w-sm
+                    shadow-md
+                    appearance-none
+                    border
+                    rounded
+                    py-2
+                    px-3
+                    text-gray-700
+                    leading-tight
+                    transform
+                    transition
+                  "
                   id="email"
                   type="text"
                   placeholder="Email"
@@ -52,7 +74,25 @@
                 <label class="form-label" for="message"> Message </label>
                 <span class="sr-only">message input</span>
                 <textarea
-                  class="w-full md:max-w-3xl sm:max-w-xl max-w-sm shadow-md appearance-none border rounded py-2 px-3 text-gray-700 leading-tight transform transition h-32 flex justify-end"
+                  class="
+                    w-full
+                    md:max-w-3xl
+                    sm:max-w-xl
+                    max-w-sm
+                    shadow-md
+                    appearance-none
+                    border
+                    rounded
+                    py-2
+                    px-3
+                    text-gray-700
+                    leading-tight
+                    transform
+                    transition
+                    h-32
+                    flex
+                    justify-end
+                  "
                   id="message"
                   placeholder="Message"
                   v-model="formdata.message"
@@ -62,7 +102,15 @@
             </form>
             <div class="flex justify-center pt-5 pb-8">
               <button
-                class="rounded-lg border-3 border-black px-4 h-10 hover:bg-gray-200 active:bg-gray-300 transition"
+                class="
+                  rounded-lg
+                  border-3 border-black
+                  px-4
+                  h-10
+                  hover:bg-gray-200
+                  active:bg-gray-300
+                  transition
+                "
                 type="submit"
                 @click="submitForm()"
               >
@@ -78,49 +126,48 @@
 
 <script>
 export default {
-    name: 'Contact',
-    title: 'Contact',
-    data() {
-        return {
-            formdata: {
-                name: '',
-                email: '',
-                message: ''
-            },
-            validation: []
-        }
-    },
-    methods: {
-      submitForm() {     
-        if(this.validateForm()) {
-          this.$router.push({
-            name: 'Home'
-          });
-        }
+  name: "Contact",
+  title: "Contact",
+  data() {
+    return {
+      formdata: {
+        name: "",
+        email: "",
+        message: "",
       },
-      validateForm() {
-        this.validation = [
-          false,
-          false,
-          false
-        ]
-        let valid = true;
-        if(this.formdata.name === '') {
-          this.validation[0] = true
-          valid = false
-        }
-        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.formdata.email) === false)
-        {
-          this.validation[1] = true
-          valid = false
-        }
-        if(this.formdata.message === '') {
-          this.validation[2] = true
-          valid = false
-        }
-        return valid
+      validation: [],
+    };
+  },
+  methods: {
+    submitForm() {
+      if (this.validateForm()) {
+        this.$router.push({
+          name: "Home",
+        });
       }
-    }
-}
+    },
+    validateForm() {
+      this.validation = [false, false, false];
+      let valid = true;
+      if (this.formdata.name === "") {
+        this.validation[0] = true;
+        valid = false;
+      }
+      if (
+        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+          this.formdata.email
+        ) === false
+      ) {
+        this.validation[1] = true;
+        valid = false;
+      }
+      if (this.formdata.message === "") {
+        this.validation[2] = true;
+        valid = false;
+      }
+      return valid;
+    },
+  },
+};
 </script>
 
