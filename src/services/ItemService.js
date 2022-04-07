@@ -11,6 +11,7 @@ class ItemService {
   async getItems() {
     const itemSnapshot = await getDocs(this._collection)
     const items = itemSnapshot.docs.map(doc => doc.data())
+    console.log(items)
 
     const convertedItems = items.map(item => {
       return this._convertItem(item)
@@ -32,6 +33,7 @@ class ItemService {
   }
 
   _convertItem(item) {
+    console.log(item);
     const convertedItem = {
       image: item.imageFile,
       name: item.name,

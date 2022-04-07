@@ -1,8 +1,8 @@
 
 <template>
   <div class="content-center mx-auto">
-      <nav class="shadow-md w-full md:w-3/4 mx-auto">
-        <div class="bg-white mt-8 w-full h-16 flex md:justify-between justify-end md:rounded md:w-3/4">
+      <nav class="shadow-md w-full mx-auto">
+        <div class="bg-white w-full h-16 flex md:justify-between justify-end md:rounded">
           <div class="text-black text-center align-middle my-auto md:block hidden ">
             <router-link to="/Home" class="px-5">Home</router-link>
             <router-link to="/Store" class="px-5">Store</router-link>
