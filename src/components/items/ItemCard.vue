@@ -84,7 +84,7 @@ export default {
     },
     openReviewForm() {
       this.$router.push({
-        name: `ReviewForm`,
+        name: `Review`,
         params: {
           item: this.itemId,
         },

@@ -2,7 +2,7 @@
   <body>
     <error-display :error="errorData" :show="errorOccured"></error-display>
     <div v-if="!errorOccured">
-      <!-- <square-spinner :loading="loading"></square-spinner> -->
+      <loading :loading="loading" class="pt-5"></loading>
       <div class="flex justify-center" data-aos="fade-up" v-if="!loading">
         <div class="flex max-w-8xl">
           <div class="p-10">
@@ -95,13 +95,12 @@
                     <label class="form-label" for="rating">Rating</label>
                     <span class="sr-only">star rating input</span>
                     <star-rating
-                      v-model="formdata.rating"
                       :star-size="40"
                       :border-color="ratingBorderColor"
                       :border-width="2"
                       :show-rating="false"
                       :active-color="primaryColor"
-                      @rating-selected="ratingSelected"
+                      @update:rating="ratingSelected"
                     >
                     </star-rating>
                   </div>
@@ -132,7 +131,7 @@
                       "
                       id="review"
                       placeholder="Review"
-                      v-model="formdata.review"
+                      v-model="formdata.text"
                       :class="{ 'border-red-500': validation[2] }"
                     />
                   </div>
@@ -157,7 +156,7 @@
 
 <script>
 import serviceLocator from "../services/serviceLocator";
-// import SquareSpinner from "../components/Spinners/SquareSpinner";
+import Loading from "../components/spinners/Loading.vue";
 import StarRating from "vue-star-rating";
 import ErrorDisplay from "../components/Error/ErrorDisplay.vue";
 import vSelect from "vue-select";
@@ -170,7 +169,7 @@ export default {
   name: "ReviewForm",
   title: "Write review",
   components: {
-    // SquareSpinner,
+    Loading,
     vSelect,
     StarRating,
     ErrorDisplay,
@@ -181,7 +180,7 @@ export default {
         name: "",
         product: "",
         rating: 0,
-        review: "",
+        text: "",
       },
       test: "",
       validation: [],
@@ -199,12 +198,19 @@ export default {
       return this.possibleValues[someKey];
     },
     async submitForm() {
+      console.log('1');
       this.hasSubmitted = true;
       this.errorOccured = false;
       if (this.validateForm()) {
+      console.log('2');
+
         this.loading = true;
         try {
+      console.log('3');
+
           await reviewService.addReview(this.formdata);
+      console.log('4');
+
           this.loading = false;
           this.$router.push({
             name: "Store",
@@ -222,7 +228,7 @@ export default {
     validateForm() {
       this.validation = [false, false, false];
       let valid = true;
-      console.log(this.formdata);
+      this.ratingBorderColor = ""
       if (this.formdata.name === "") {
         this.validation[0] = true;
         valid = false;
@@ -233,20 +239,23 @@ export default {
       }
       if (this.formdata.rating <= 0) {
         this.ratingBorderColor = "#DC3545";
+        console.log('5')
         valid = false;
       }
-      if (this.formdata.review === "") {
+      if (this.formdata.text === "") {
         this.validation[2] = true;
         valid = false;
       }
       console.log(this.validation);
+
+      console.log(this.formdata);
       return valid;
     },
     async getProducts() {
       this.errorOccured = false;
       try {
         this.products = await itemService.getItems();
-        console.log(this.products);
+        // console.log(this.products);
         this.options = [
 
         ]
@@ -262,13 +271,14 @@ export default {
         this.displayForm = true;
       }
     },
-    ratingSelected: function () {
+    ratingSelected: function (rating) {
+      console.log(`test 6 ${rating}`)
       this.ratingBorderColor = "";
+      this.formdata.rating = rating
     },
   },
   mounted() {
-    this.formdata.product = "";
-    // this.formdata.product = this.$route.params.item;
+    this.formdata.product = this.$route.params.item;
 
     console.log(this.formdata);
     this.getProducts();
