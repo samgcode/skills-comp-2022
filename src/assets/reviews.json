@@ -2,38 +2,47 @@
   {
     "name": "john",
     "text": "this is a review hello yes this is a review hello yes this is a review hello yes this is a review hello yes this is a review hello yes this is a review hello yes",
-    "rating": 1
+    "rating": 1,
+    "product": "1"
   },{
     "name": "john",
     "text": "this is a review hello yes",
-    "rating": 2
+    "rating": 2,
+    "product": "3"
   },{
     "name": "john",
     "text": "this is a review hello yes",
-    "rating": 5
+    "rating": 5,
+    "product": "5"
   },{
     "name": "john",
     "text": "this is a review hello yes",
-    "rating": 4
+    "rating": 4,
+    "product": "3"
   },{
     "name": "john",
     "text": "this is a review hello yes",
-    "rating": 2
+    "rating": 2,
+    "product": "4"
   },{
     "name": "john",
     "text": "this is a review hello yes",
-    "rating": 3
+    "rating": 3,
+    "product": "1"
   },{
     "name": "john",
     "text": "this is a review hello yes",
-    "rating": 5
+    "rating": 5,
+    "product": "2"
   },{
     "name": "john",
     "text": "this is a review hello yes",
-    "rating": 1
+    "rating": 1,
+    "product": "6"
   },{
     "name": "john",
     "text": "this is a review hello yes",
-    "rating": 0
+    "rating": 0,
+    "product": "4"
   }
 ]
