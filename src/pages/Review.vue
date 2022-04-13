@@ -167,7 +167,7 @@ const reviewService = serviceLocator.services.reviewService;
 
 export default {
   name: "ReviewForm",
-  title: "Write review",
+  title: "Write a review",
   components: {
     Loading,
     vSelect,

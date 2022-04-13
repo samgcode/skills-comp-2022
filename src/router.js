@@ -8,7 +8,7 @@ import Review from './pages/Review.vue'
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    {path: '/', name: 'Home', component: Home},
+    {path: '/', redirect: '/home'},
     {path: '/Home', name: 'Home', component: Home},
     {path: '/Store', name: 'Store', component: Store},
     {path: '/Contact', name: 'Contact', component: Contact},

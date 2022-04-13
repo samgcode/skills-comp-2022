@@ -5,8 +5,9 @@ import { faEdit } from '@fortawesome/free-solid-svg-icons'
 
 import App from './App.vue'
 import router from './router'
+import titleMixin from './Mixins/titleMixin'
 import './index.css'
 
 library.add(faEdit)
 
-createApp(App).use(router).component("font-awesome-icon", FontAwesomeIcon).mount('#app')
+createApp(App).mixin(titleMixin).use(router).component("font-awesome-icon", FontAwesomeIcon).mount('#app')

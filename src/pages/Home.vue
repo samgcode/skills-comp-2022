@@ -359,6 +359,7 @@ const reviewService = serviceLocator.services.reviewService;
 const colors = new Colors();
 
 export default {
+  title: 'Home',
   components: {
     StarRating,
     ReviewCard,
