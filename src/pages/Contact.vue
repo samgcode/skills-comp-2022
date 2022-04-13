@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center pt-8">
+  <div class="flex justify-center pt-8 pb-32">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4" data-aos="fade-up">
       <div class="w-full rounded-lg shadow-lg">
         <div class="px-8 pt-8 w-96">
