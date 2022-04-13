@@ -10,10 +10,10 @@ module.exports = {
       },
       colors: {
         primary: {
-          superlight: '#66ff8a',
-          light: '#42ff6e',
-          DEFAULT: '#11fe48',
-          dark: '#10e645'
+          superlight: '#ff828d',
+          light: '#ff5e6c',
+          DEFAULT: '#FF4B5A',
+          dark: '#e64350'
         },
         secondary: {
           ultralight: '#cfe1ff',
@@ -21,11 +21,19 @@ module.exports = {
           light: '#478dfc',
           DEFAULT: '#3b83f6',
           dark: '#3375de'
-        }
+        },
+        dark: "#1C243B"
       },
       borderWidth: {
         '3': '3px'
       }
+    },
+  },
+  variants: {
+    extend: {
+      backgroundColor: ['active', 'hover'],
+      translate: ['hover'],
+      scale: ['hover']
     },
   },
   plugins: [],

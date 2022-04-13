@@ -1,7 +1,7 @@
 
 class Colors {
     constructor() {
-        this.primary = '#11fe48'
+        this.primary = '#FF4B5A'
         this.secondary = '#3b83f6'
     }
 }

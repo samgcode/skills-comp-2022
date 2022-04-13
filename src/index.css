@@ -1,7 +1,10 @@
+@import url("https://use.typekit.net/wnr4sra.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.form-input {
-  @apply w-2xl md:max-w-3xl sm:max-w-xl max-w-sm shadow-md appearance-none border rounded py-2 px-3 text-gray-700 leading-tight transform transition;
+.font-primary {
+    font-family:quicksand, sans-serif;
+    font-weight:500;
+    font-style:normal;
 }
