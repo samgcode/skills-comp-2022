@@ -10,7 +10,7 @@
     @click="openReviewForm()"
         class="object-fill aspect-square w-full rounded-t-md"
         :class="{ hover: hover }"
-        src="../../assets/temp.png"
+        :src="`https://firebasestorage.googleapis.com/v0/b/skills-2022.appspot.com/o/${item.imageName}`"
         alt="one of our proucts"
       />
       <!-- <h1 class="text-2xl text-primary absolute top-5 left-5" v-if="hover">Write a review</h1>

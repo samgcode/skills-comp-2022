@@ -33,7 +33,7 @@ class ItemService {
 
   _convertItem(item) {
     const convertedItem = {
-      image: item.imageFile,
+      imageName: item.imageName,
       name: item.name,
       price: item.price,
       id: item.id,

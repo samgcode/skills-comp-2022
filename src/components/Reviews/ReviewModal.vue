@@ -118,7 +118,7 @@
                       "
                     >
                       <div class="px-4 py-4">
-                        <h1 class="text-xl">No reviews for this item</h1>
+                        <h1 class="text-xl">No reviews are currently available</h1>
                         <p class="text-gray-500 text-md">
                           You can submit one on the store page
                         </p>

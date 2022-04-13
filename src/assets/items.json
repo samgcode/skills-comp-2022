@@ -2,26 +2,32 @@
   {
     "name": "test0",
     "price": 30,
+    "imageName": "1.png?alt=media&token=179d5d76-1fab-43a0-b4b4-270cc5140c3d",
     "id": 1
   }, {
     "name": "test1",
     "price": 30,
+    "imageName": "2.png?alt=media&token=07200268-74dd-4fcf-9d3d-da4238108c78",
     "id": 2
   }, {
     "name": "test2",
     "price": 30,
+    "imageName": "Untitled.png?alt=media&token=91a8d763-7a51-42b8-8a4d-5c00db63e856",
     "id": 3
   }, {
     "name": "test3",
     "price": 300,
+    "imageName": "4.png?alt=media&token=c42fd60f-ef4a-460d-8e67-8777d57e8620",
     "id": 4
   }, {
     "name": "test4",
     "price": 300,
+    "imageName": "5.png?alt=media&token=f699d7a3-e752-4013-ad55-9ee26d3028ba",
     "id": 5
   }, {
     "name": "test5",
     "price": 300,
+    "imageName": "6.png?alt=media&token=c55f3251-38c2-4f1f-8926-2930bc7aff4d",
     "id": 6
   }
 ]

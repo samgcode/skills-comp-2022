@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pb-20">
     <loading :loading="loading" class="pt-5"></loading>
     <error-display :error="error" :show="errorOccured"></error-display>
     <div

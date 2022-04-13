@@ -54,7 +54,7 @@
                       :class="{ 'border-red-500': validation[0] }"
                     />
                   </div>
-                  <div class="mb-4">
+                  <div class="mb-4" v-if="showProduct">
                     <label class="form-label" for="product">Product</label>
                     <span class="sr-only">product input</span>
                     <select
@@ -190,7 +190,8 @@ export default {
       loading: true,
       ratingBorderColor: "",
       primaryColor: "",
-      options: []
+      options: [],
+      showProduct: true
     };
   },
   methods: {
@@ -239,23 +240,18 @@ export default {
       }
       if (this.formdata.rating <= 0) {
         this.ratingBorderColor = "#DC3545";
-        console.log('5')
         valid = false;
       }
       if (this.formdata.text === "") {
         this.validation[2] = true;
         valid = false;
       }
-      console.log(this.validation);
-
-      console.log(this.formdata);
       return valid;
     },
     async getProducts() {
       this.errorOccured = false;
       try {
         this.products = await itemService.getItems();
-        // console.log(this.products);
         this.options = [
 
         ]
@@ -272,15 +268,15 @@ export default {
       }
     },
     ratingSelected: function (rating) {
-      console.log(`test 6 ${rating}`)
       this.ratingBorderColor = "";
       this.formdata.rating = rating
     },
   },
   mounted() {
     this.formdata.product = this.$route.params.item;
-
-    console.log(this.formdata);
+    if(this.formdata.product === 'noItem') {
+      this.showProduct = false;
+    }
     this.getProducts();
     this.primaryColor = colors.primary;
   },
