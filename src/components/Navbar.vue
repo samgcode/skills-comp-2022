@@ -4,11 +4,11 @@
       <nav class="shadow-md w-full mx-auto">
         <div class="bg-dark w-full h-16 flex md:justify-between justify-end">
           <div class="text-white text-center align-middle my-auto md:block hidden text-xl">
-            <router-link to="/Home" class="nav-link  ml-20">Home</router-link>
-            <router-link to="/Store" class="nav-link">Services</router-link>
-            <router-link to="/Calculator" class="nav-link">Quote calculator</router-link>
-            <router-link to="/Contact" class="nav-link">Contact us</router-link>
-            <router-link to="/About" class="nav-link">About us</router-link>
+            <router-link to="/Home.html" class="nav-link  ml-20">Home</router-link>
+            <router-link to="/Store.html" class="nav-link">Services</router-link>
+            <router-link to="/Calculator.html" class="nav-link">Quote calculator</router-link>
+            <router-link to="/Contact.html" class="nav-link">Contact us</router-link>
+            <router-link to="/About.html" class="nav-link">About us</router-link>
           </div>
               <img class="p-2" src="https://firebasestorage.googleapis.com/v0/b/skills-2022.appspot.com/o/Logo.svg?alt=media&token=39806621-9b94-46ef-b54e-a64f505f8de4" alt="logo">
           <button class="w-6 h-6 my-auto text-primary mx-5 md:hidden hover:text-white transition"  @click="open = !open">
@@ -17,11 +17,11 @@
           </button>
         </div>
           <div v-if="open" class="w-full flex flex-col text-white align-middle bg-dark z-50 my-auto md:hidden text-xl">
-            <router-link to="/Home" class="nav-link-sm">Home</router-link>
-            <router-link to="/Store" class="nav-link-sm">Services</router-link>
-            <router-link to="/Calculator" class="nav-link-sm">Quote calculator</router-link>
-            <router-link to="/Contact" class="nav-link-sm">Contact us</router-link>
-            <router-link to="/About" class="nav-link-sm">About us</router-link>
+            <router-link to="/Home.html" class="nav-link-sm">Home</router-link>
+            <router-link to="/Store.html" class="nav-link-sm">Services</router-link>
+            <router-link to="/Calculator.html" class="nav-link-sm">Quote calculator</router-link>
+            <router-link to="/Contact.html" class="nav-link-sm">Contact us</router-link>
+            <router-link to="/About.html" class="nav-link-sm">About us</router-link>
           </div>
       </nav>
     </div>

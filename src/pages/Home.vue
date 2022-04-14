@@ -252,7 +252,7 @@
       </p>
       <div class="mt-5">
         <router-link
-          to="/Calculator"
+          to="/Calculator.html"
           class="btn-primary-outline"
           data-aos="fade-down"
         >
@@ -278,7 +278,7 @@
         </div>
         <div class="mt-6">
           <router-link
-            to="/Store"
+            to="/Store.html"
             class="btn-primary-outline"
             data-aos="fade-down"
           >

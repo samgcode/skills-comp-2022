@@ -10,13 +10,13 @@ import Calculator from './pages/Calculator.vue'
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: '/', redirect: '/Home' },
-    { path: '/Home', name: 'Home', component: Home },
-    { path: '/Store', name: 'Store', component: Store },
-    { path: '/Contact', name: 'Contact', component: Contact },
-    { path: '/About', name: 'About', component: About },
-    { path: '/Calculator', name: 'Calculator', component: Calculator },
-    { path: '/Review/:item', name: 'Review', component: Review, props: true },
+    { path: '/', redirect: '/Home.html' },
+    { path: '/Home.html', name: 'Home', component: Home },
+    { path: '/Store.html', name: 'Store', component: Store },
+    { path: '/Contact.html', name: 'Contact', component: Contact },
+    { path: '/About.html', name: 'About', component: About },
+    { path: '/Calculator.html', name: 'Calculator', component: Calculator },
+    { path: '/Review.html', name: 'Review', component: Review},
     { path: '/*', redirect: { name: 'route-name' } }
   ]
 })

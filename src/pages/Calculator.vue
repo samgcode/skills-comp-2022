@@ -73,9 +73,7 @@
         <div class="flex justify-center text-center content-center py-8">
           <h1 class="my-auto text-xl pr-5">Aproximate quote: ${{ price }}</h1>
           <button
-            class="
-              btn-primary-outline
-            "
+            class="btn-primary-outline"
             @click="submitForm()"
             v-if="!loading"
           >
@@ -124,11 +122,9 @@ export default {
     async submitForm() {
       if (this.validate()) {
         this.loading = true;
-        setTimeout(() => {
-          this.$router.push({
-            path: "/Home",
-          });
-        }, 1000);
+        this.$router.push({
+            name: "Home",
+          })
       }
     },
     formChanged() {

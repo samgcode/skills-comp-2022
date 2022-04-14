@@ -107,7 +107,7 @@
       </div>
     </div>
   </div>
-  <div class="w-full bg-light text-center">
+  <div class="w-full text-center">
     <div class="flex flex-wrap flex-row justify-center pt-10 gap-6 pb-10">
       <div class="flex flex-col">
         <div class="flex-1 justify-center" data-aos-delay="100">
