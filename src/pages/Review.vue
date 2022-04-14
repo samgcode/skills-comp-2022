@@ -281,9 +281,9 @@ export default {
   },
   mounted() {
     this.formdata.product = this.$route.params.item;
-    if (this.formdata.product === "noItem") {
+    // if (this.formdata.product === "noItem") {
+    //   }
       this.showProduct = false;
-    }
     this.getProducts();
     this.primaryColor = colors.primary;
   },

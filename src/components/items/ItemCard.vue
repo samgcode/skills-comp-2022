@@ -1,10 +1,8 @@
 
 <template>
   <div class="rounded-md shadow-lg w-[30rem]">
-    <div class="">
+    <div @mouseover="hover = true" @mouseleave="hover = false">
       <img
-        @mouseover="hover = true"
-        @mouseleave="hover = false"
         @click="openReviewForm()"
         class="object-contain aspect-square w-full rounded-t-md"
         :class="{ hover: hover }"
@@ -39,7 +37,7 @@
         {{ description }} ...
         <button
           class="font-bold text-xl hover:text-primary text-blue-600"
-          @click="showLongDescription=!showLongDescription"
+          @click="showLongDescription = !showLongDescription"
         >
           show more
         </button>
@@ -48,7 +46,7 @@
         {{ longDescription }}
         <button
           class="font-bold text-xl hover:text-primary text-blue-600"
-          @click="showLongDescription=!showLongDescription"
+          @click="showLongDescription = !showLongDescription"
         >
           close
         </button>
@@ -61,8 +59,8 @@
 <script>
 // import serviceLocator from "@/services/serviceLocator"
 // import StarRating from "vue-star-rating"
-// import Colors from "../../colors"
-// const colors = new Colors()
+import Colors from "../../colors";
+const colors = new Colors();
 // const reviewService = serviceLocator.services.reviewService
 
 export default {
@@ -104,7 +102,7 @@ export default {
       this.longDescription = this.item.description;
       this.description = this.item.description.slice(0, 100);
     }
-    // this.primaryColor = colors.primary
+    this.primaryColor = colors.primary;
   },
 };
 </script>

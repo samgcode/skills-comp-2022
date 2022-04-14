@@ -49,7 +49,7 @@
                 class="text-lg leading-6 font-medium text-gray-900"
                 id="modal-headline"
               >
-                Reviews for {{ item.name }}
+                Here are some reviews for our company
               </h3>
             </div>
             <button
@@ -241,7 +241,7 @@ export default {
       this.$router.push({
         name: `Review`,
         params: {
-          item: this.item.id,
+          item: 'noItem',
         },
       });
     },
