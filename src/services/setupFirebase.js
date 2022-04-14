@@ -8,5 +8,6 @@ const db = getFirestore(app)
 
 export const collections = {
   items: collection(db, 'Items'),
-  reviews: collection(db, 'Reviews')
+  reviews: collection(db, 'Reviews'),
+  quoteItems: collection(db, 'QuoteItems')
 }

@@ -5,6 +5,7 @@ import Store from './pages/Store.vue'
 import Contact from './pages/Contact.vue'
 import Review from './pages/Review.vue'
 import About from './pages/About.vue'
+import Calculator from './pages/Calculator.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -14,6 +15,7 @@ const router = createRouter({
     { path: '/Store', name: 'Store', component: Store },
     { path: '/Contact', name: 'Contact', component: Contact },
     { path: '/About', name: 'About', component: About },
+    { path: '/Calculator', name: 'Calculator', component: Calculator },
     { path: '/Review/:item', name: 'Review', component: Review, props: true },
     { path: '/*', redirect: { name: 'route-name' } }
   ]

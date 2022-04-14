@@ -1,0 +1,37 @@
+[
+    {
+        "name": "3D Modelling Landscapes, Nature, Insects, Public spaces",
+        "description": "Natural beauty with unnatural precision. animations included.",
+        "price": 120,
+        "perHour": true
+    },
+    {
+        "name": "3D modelling character: alterations to existing character models",
+        "description": "Figures, Clothing and Accessories, Rigging, Lo-Poly Modelling, 3D Print Compatible. Human characters are the most difficult",
+        "price": 100,
+        "perHour": false
+    },
+    {
+        "name": "3D modelling characters: new character models.",
+        "description": "Figures, Clothing and Accessories, Rigging, Lo-Poly Modelling, 3D Print Compatible. Lower prices for non-humans and low-poly characters.",
+        "price": 500,
+        "perHour": false
+    },
+    {
+        "name": "3D Printing, Character Minatures, Model Conversion, Jewlry, Paercraft, Peakura",
+        "description": "Cheat-free 3D design. No textures, no effects, just geometry. Perfect for 3D printing, custom jewelry, or Pepakura paper-craft!",
+        "price": 60,
+        "perHour": false
+    },
+    {
+        "name": "Architecture, Interior / Exterior, Remodel, Spaceships / Technology, Fanstasy Buildings",
+        "description": "Architectural pre-vis with the right balance of detail and abstraction.",
+        "price": "250",
+        "perHour": true
+    },
+    {
+        "name": "Procedural Modeling, Product Visualizaiton, Graphics and Logos, Misc",
+        "price": "100",
+        "perHour": true
+    }
+]

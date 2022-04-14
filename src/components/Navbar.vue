@@ -6,6 +6,7 @@
           <div class="text-white text-center align-middle my-auto md:block hidden text-xl">
             <router-link to="/Home" class="px-5 ml-20">Home</router-link>
             <router-link to="/Store" class="px-5">Services</router-link>
+            <router-link to="/Calculator" class="px-5">Quote calculator</router-link>
             <router-link to="/Contact" class="px-5">Contact us</router-link>
             <router-link to="/About" class="px-5">About us</router-link>
           </div>
@@ -18,6 +19,7 @@
           <div v-if="open" class="w-full flex flex-col text-white align-middle bg-dark z-50 my-auto md:hidden text-xl">
             <router-link to="/Home" class="mx-5 my-2">Home</router-link>
             <router-link to="/Store" class="mx-5 my-2">Services</router-link>
+            <router-link to="/Calculator" class="mx-5 my-2">Quote calculator</router-link>
             <router-link to="/Contact" class="mx-5 my-2">Contact us</router-link>
             <router-link to="/About" class="mx-5 my-2">About us</router-link>
           </div>
