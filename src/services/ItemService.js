@@ -19,10 +19,13 @@ class ItemService {
   }
 
   async populateDatabase() {
+    let autoId = 0
     const itemSnapshot = await getDocs(this._collection)
     if (!itemSnapshot.docs[0]) {
       itemData.forEach(item => {
+        item.id = autoId
         this.addItem(item)
+        autoId++
       })
     }
   }
