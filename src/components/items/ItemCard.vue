@@ -1,9 +1,8 @@
 
 <template>
   <div class="rounded-md shadow-lg xl:w-[25rem] w-96">
-    <div @mouseover="hover = true" @mouseleave="hover = false">
+    <div @mouseover="hover = true" @mouseleave="hover = false" @click="openReviewForm()">
       <img
-        @click="openReviewForm()"
         class="object-contain aspect-square w-full rounded-t-md"
         :class="{ hover: hover }"
         :src="`https://firebasestorage.googleapis.com/v0/b/skills-2022.appspot.com/o/${item.imageName}`"

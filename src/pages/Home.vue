@@ -262,10 +262,10 @@
     </div>
   </div>
   <div class="mt-24 xl:mx-52 sm:mx-10">
-    <div class="px-8 py-4 lg:flex justify-between">
+    <div class="px-8 py-4 lg:flex flex-col 2xl:flex-row justify-between">
       <img
         src="https://firebasestorage.googleapis.com/v0/b/skills-2022.appspot.com/o/roomRender.png?alt=media&token=682e9305-f5a1-4167-8b94-730836e6f55d"
-        class="object-contain h-96 lg:pt-0 pt-4"
+        class="object-contain w-[40rem] lg:pt-0 pt-4"
         data-aos="fade"
       />
       <div class="flex flex-col">
