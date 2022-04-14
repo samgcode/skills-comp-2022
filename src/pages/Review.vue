@@ -138,7 +138,16 @@
                 </form>
                 <div class="flex justify-center pt-5 pb-8">
                   <button
-                    class="border-4 border-black rounded-lg px-2 h-10"
+                    class="
+                      rounded-lg
+                      border-3 border-primary
+                      text-primary
+                      px-4
+                      h-10
+                      hover:bg-primary-superlight
+                      active:bg-primary-light
+                      transition
+                    "
                     type="submit"
                     @click="submitForm()"
                   >
@@ -191,7 +200,7 @@ export default {
       ratingBorderColor: "",
       primaryColor: "",
       options: [],
-      showProduct: true
+      showProduct: true,
     };
   },
   methods: {
@@ -199,18 +208,18 @@ export default {
       return this.possibleValues[someKey];
     },
     async submitForm() {
-      console.log('1');
+      console.log("1");
       this.hasSubmitted = true;
       this.errorOccured = false;
       if (this.validateForm()) {
-      console.log('2');
+        console.log("2");
 
         this.loading = true;
         try {
-      console.log('3');
+          console.log("3");
 
           await reviewService.addReview(this.formdata);
-      console.log('4');
+          console.log("4");
 
           this.loading = false;
           this.$router.push({
@@ -229,7 +238,7 @@ export default {
     validateForm() {
       this.validation = [false, false, false];
       let valid = true;
-      this.ratingBorderColor = ""
+      this.ratingBorderColor = "";
       if (this.formdata.name === "") {
         this.validation[0] = true;
         valid = false;
@@ -252,9 +261,7 @@ export default {
       this.errorOccured = false;
       try {
         this.products = await itemService.getItems();
-        this.options = [
-
-        ]
+        this.options = [];
         this.loading = false;
       } catch (err) {
         this.loading = false;
@@ -269,12 +276,12 @@ export default {
     },
     ratingSelected: function (rating) {
       this.ratingBorderColor = "";
-      this.formdata.rating = rating
+      this.formdata.rating = rating;
     },
   },
   mounted() {
     this.formdata.product = this.$route.params.item;
-    if(this.formdata.product === 'noItem') {
+    if (this.formdata.product === "noItem") {
       this.showProduct = false;
     }
     this.getProducts();

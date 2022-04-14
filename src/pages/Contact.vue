@@ -98,11 +98,12 @@
             <button
               class="
                 rounded-lg
-                border-3 border-black
+                border-3 border-primary
+                text-primary
                 px-4
                 h-10
-                hover:bg-gray-200
-                active:bg-gray-300
+                hover:bg-primary-superlight
+                active:bg-primary-light
                 transition
               "
               type="submit"

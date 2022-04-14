@@ -239,6 +239,7 @@
                 hover:-translate-y-0.5 hover:bg-primary-light
                 active:bg-primary-superlight
                 font-semibold
+                hover:shadow-md hover:shadow-primary-dark
               "
               >About us</router-link
             >
@@ -254,6 +255,7 @@
                 rounded-md
                 inset-1
                 text-white
+                hover:shadow-md hover:shadow-white
               "
               >Store</router-link
             >
@@ -336,7 +338,18 @@
         </div>
         <div class="h-full flex flex-wrap content-center lg:pt-0 pt-4">
           <button
-            class="bg-primary rounded-lg font-bold h-12 px-3"
+            class="
+              transition
+              bg-primary
+              rounded-lg
+              font-bold
+              h-12
+              px-3
+              hover:bg-primary-light hover:shadow-md hover:shadow-primary
+              active:bg-primary-superlight
+              active:shadow-md
+              active:shadow-primary
+            "
             @click="showModal"
           >
             See more reviews
@@ -349,8 +362,8 @@
 
 <script>
 import StarRating from "vue-star-rating";
-import Loading from "../components/spinners/Loading.vue"
-import ErrorDisplay from "../components/Error/ErrorDisplay.vue"
+import Loading from "../components/spinners/Loading.vue";
+import ErrorDisplay from "../components/Error/ErrorDisplay.vue";
 import ReviewCard from "../components/Reviews/ReviewCard.vue";
 import Colors from "../colors";
 import serviceLocator from "../services/serviceLocator";
@@ -359,12 +372,12 @@ const reviewService = serviceLocator.services.reviewService;
 const colors = new Colors();
 
 export default {
-  title: 'Home',
+  title: "Home",
   components: {
     StarRating,
     ReviewCard,
     Loading,
-    ErrorDisplay
+    ErrorDisplay,
   },
   data() {
     return {
@@ -385,9 +398,9 @@ export default {
   methods: {
     showModal() {
       // if (this.open) {
-        this.hasReviews = false;
-        this.showReviews = true;
-        this.displayReviews();
+      this.hasReviews = false;
+      this.showReviews = true;
+      this.displayReviews();
       // }
     },
     async displayReviews() {
@@ -403,7 +416,7 @@ export default {
         }
         this.loading = false;
       } catch (err) {
-        console.error(err)
+        console.error(err);
         this.error = {
           message: "error occured while fetching reviews",
         };
@@ -419,7 +432,7 @@ export default {
       this.$router.push({
         name: `Review`,
         params: {
-          item: 'noItem'
+          item: "noItem",
         },
       });
     },

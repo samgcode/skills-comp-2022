@@ -1,5 +1,37 @@
 <template>
   <div class="pb-20">
+    <div class="flex flex-col justify-center text-center pt-5">
+      <h1 class="text-4xl text-black">Our Services</h1>
+      <div class="flex gap-4 justify-center pt-3 content-center">
+        <router-link
+          :to="{ name: 'Review', params: { item: 'none' } }"
+          class="
+            border-4 border-primary
+            p-2
+            rounded-md
+            text-primary
+            shadow-lg
+            hover:bg-red-100 hover:shadow-md hover:shadow-primary
+            active:bg-primary-superlight active:shadow-md active:shadow-primary
+          "
+          >Write a review</router-link
+        >
+        <button
+          class="
+            bg-secondary
+            p-2
+            rounded-md
+            font-semibold
+            shadow-lg
+            hover:bg-secondary-light hover:shadow-md hover:shadow-secondary
+            active:bg-secondary-light active:shadow-md active:shadow-secondary
+          "
+          @click="getReviews"
+        >
+          See reviews
+        </button>
+      </div>
+    </div>
     <loading :loading="loading" class="pt-5"></loading>
     <error-display :error="error" :show="errorOccured"></error-display>
     <div
@@ -83,19 +115,19 @@ export default {
         id: itemId,
       };
       try {
-        this.reviews = await reviewService.getReviews()
-        this.reviewsLoading = false
+        this.reviews = await reviewService.getReviews();
+        this.reviewsLoading = false;
         if (this.reviews.length > 0) {
           this.hasReviews = true;
         } else {
           this.hasReviews = false;
         }
       } catch (err) {
-        this.reviewsLoading = false
-        this.reviewErrorOccured = true
+        this.reviewsLoading = false;
+        this.reviewErrorOccured = true;
         this.reviewError = {
-          message: 'Error occured while trying to fetch reviews'
-        }
+          message: "Error occured while trying to fetch reviews",
+        };
       }
     },
     closeModal() {

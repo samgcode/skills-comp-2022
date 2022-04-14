@@ -3,7 +3,7 @@
     <EmbedMap :mapSrc="mapURL" :key="mapRerenderKey" />
     <select
       v-model="cityName"
-      class="text-lg rounded-md py-1 mt-2 border-4 border-black focus:outline-none hover:bg-gray-100"
+      class="text-lg rounded-md py-1 mt-2 border-4 border-primary text-primary focus:outline-none hover:bg-primary-superlight"
       data-aos="fade-up"
     >
       <option class="bg-white">Calgary</option>
