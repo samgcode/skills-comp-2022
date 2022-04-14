@@ -258,7 +258,7 @@
                 text-white
                 hover:shadow-md hover:shadow-white
               "
-              >Store</router-link
+              >Services</router-link
             >
           </div>
         </div>
@@ -308,7 +308,7 @@
         <div data-aos="fade-left">
           <h1 class="mt-20 text-4xl font-bold">We offer premium services</h1>
           <h2 class="text-lg max-w-md">
-            We offermany services such as 3d designing and printing, graphic
+            We offer many services such as 3d designing and printing, graphic
             design, 3D animation, and photgraphy
           </h2>
         </div>
