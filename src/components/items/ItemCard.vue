@@ -1,14 +1,12 @@
 
 <template>
-  <div
-    class="rounded-md shadow-lg"
-    @mouseover="hover = true"
-    @mouseleave="hover = false"
-  >
+  <div class="rounded-md shadow-lg w-[30rem]">
     <div class="">
       <img
+        @mouseover="hover = true"
+        @mouseleave="hover = false"
         @click="openReviewForm()"
-        class="object-fill aspect-square w-full rounded-t-md"
+        class="object-contain aspect-square w-full rounded-t-md"
         :class="{ hover: hover }"
         :src="`https://firebasestorage.googleapis.com/v0/b/skills-2022.appspot.com/o/${item.imageName}`"
         alt="one of our proucts"
@@ -37,23 +35,24 @@
       "
     >
       <h1 class="text-xl">{{ item.name }}</h1>
-      <h1 class="text-gray-500">${{ item.price }}</h1>
-      <!-- <button
-        type="button"
-        class="
-          border-2 border-blue-600
-          rounded-md
-          text-blue-600
-          font-semibold
-          p-2
-          transition
-          hover:bg-blue-100
-          active:bg-blue-200
-        "
-        @click="showModal()"
-      >
-        Reviews
-      </button> -->
+      <h1 class="text-gray-500 flex flex-col" v-if="!showLongDescription">
+        {{ description }} ...
+        <button
+          class="font-bold text-xl hover:text-primary text-blue-600"
+          @click="showLongDescription=!showLongDescription"
+        >
+          show more
+        </button>
+      </h1>
+      <h1 class="text-gray-500 flex flex-col" v-if="showLongDescription">
+        {{ longDescription }}
+        <button
+          class="font-bold text-xl hover:text-primary text-blue-600"
+          @click="showLongDescription=!showLongDescription"
+        >
+          close
+        </button>
+      </h1>
     </div>
   </div>
 </template>
@@ -81,20 +80,14 @@ export default {
       reviews: [],
       hover: false,
       primaryColor: "",
+      description: "",
+      longDescription: "",
+      showLongDescription: false,
     };
   },
   methods: {
     async showModal() {
       this.$emit("show", this.item.name, this.itemId);
-      // try {
-      //   this.$emit("show", this.item.name, this.itemId)
-      //   this.reviews = await reviewService.getReviewsByItemId(this.itemId)
-      //   this.$emit("reviews", this.reviews)
-      // } catch (err) {
-      //   this.$emit("onError", {
-      //     message: "Error occured while trying to fetch reviews",
-      //   })
-      // }
     },
     openReviewForm() {
       this.$router.push({
@@ -107,6 +100,10 @@ export default {
   },
   mounted() {
     this.itemId = this.item.id;
+    if (this.item.description.length >= 100) {
+      this.longDescription = this.item.description;
+      this.description = this.item.description.slice(0, 100);
+    }
     // this.primaryColor = colors.primary
   },
 };

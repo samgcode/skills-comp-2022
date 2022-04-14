@@ -15,7 +15,7 @@ class ItemService {
     const convertedItems = items.map(item => {
       return this._convertItem(item)
     })
-    return convertedItems
+    return items
   }
 
   async populateDatabase() {

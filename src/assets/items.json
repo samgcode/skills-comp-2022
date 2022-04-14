@@ -1,33 +1,23 @@
 [
   {
-    "name": "test0",
-    "price": 30,
-    "imageName": "1.png?alt=media&token=179d5d76-1fab-43a0-b4b4-270cc5140c3d",
+    "name": "3D Design and Modeling",
+    "description": "Have a 3D idea and want it built? Now product for fabrication? Parts broken and want to reproduce new? Tired of uniform and want to replace to your personalized creation? Come by and share your idea with our designers or rent time on a workstation and design it yourself!",
+    "imageName": "printer1.jpg?alt=media&token=886a9039-e4ef-4b86-88a9-d3587d50275b",
     "id": 0
-  }, {
-    "name": "test1",
-    "price": 30,
-    "imageName": "2.png?alt=media&token=07200268-74dd-4fcf-9d3d-da4238108c78",
+  },{
+    "name": "3D & Animation",
+    "description": "We design a wide variety of animations for websites and business. With professional voice-overs, 3D experts and savvy artists, we draw on a wide variety of resources to produce high quality video animation services. Our team can create short clips, promotional trailers or information based explainers, all which helps you reach your audience in a more efficient fashion. Our skilled animators and designers also produce high quality 3D stills, renders and isolated objects for professional, creative and personal uses.",
+    "imageName": "BlenderRobot.jpg?alt=media&token=d2a8efa5-f3f6-4f5e-be0c-8f3d5da7bfff",
     "id": 0
-  }, {
-    "name": "test2",
-    "price": 30,
-    "imageName": "Untitled.png?alt=media&token=91a8d763-7a51-42b8-8a4d-5c00db63e856",
+  },{
+    "name": "Photography",
+    "description": "There’s a reason why photography can be a fulltime job, someone’s life work and the driver behind the world’s most successful social media platforms. Photos speak louder than words. In one moment, an image can tell you more than an entire thesis. \n \n Imagery is PowerfulWe know design, marketing and advertising play critical roles in communications, but good photography makes the planning, research and production of these strategies possible. Whether it be people, food, furniture or design, the difference in lighting, aperture, exposure and setting can make the difference between okay and incredible. \n \n Our team makes sure we deliver the best photographic services to make your brand click. Combined with digital enhancement, graphic design and attention to detail, we make sure that the ultimate end product in any campaign captures, the hearts, minds and eyes of onlookers.",
+    "imageName": "ButterflyRender1.jpg?alt=media&token=4aef422d-f810-48b4-8dc5-b5cd96bd9ce4",
     "id": 0
-  }, {
-    "name": "test3",
-    "price": 300,
-    "imageName": "4.png?alt=media&token=c42fd60f-ef4a-460d-8e67-8777d57e8620",
-    "id": 0
-  }, {
-    "name": "test4",
-    "price": 300,
-    "imageName": "5.png?alt=media&token=f699d7a3-e752-4013-ad55-9ee26d3028ba",
-    "id": 0
-  }, {
-    "name": "test5",
-    "price": 300,
-    "imageName": "6.png?alt=media&token=c55f3251-38c2-4f1f-8926-2930bc7aff4d",
+  },{
+    "name": "3D Printing /RAPID PROTOTYPING",
+    "description": "RAPID PROTOTYPING IS A COST EFFECTIVE METHOD TO ANALYZE YOUR PART DESIGNS BEFORE COMMITTING TO THE HIGH COST OF TOOLING DEVELOPMENT OR MACHINING PRODUCTION PARTS. \n \n CREATE YOUR MODEL IN ANY 3D MODELLING SOFTWARE, EXPORT YOUR DESIGN AS AN STL FILE. SEND US YOUR FINISHED DESIGN (INFO@RealWorldModelling.COM)  AND WE CAN FINISH PRINTING WITHIN 3 BUSINESS DAYS. YOU CAN DO YOUR OWN POST PRODUCTION OR HAVE US FINISH IT FOR YOU. ",
+    "imageName": "printers4.jpg?alt=media&token=3a17c547-7fab-4290-8f02-fd0c3e39efdf",
     "id": 0
   }
 ]

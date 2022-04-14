@@ -36,13 +36,12 @@
     <error-display :error="error" :show="errorOccured"></error-display>
     <div
       class="
-        grid grid-cols-1
-        gap-4
-        w-3/4
+        grid grid-cols-1 gap-6
+        w-[80%]
         mx-auto
-        sm:grid-cols-2
-        lg:grid-cols-3
-        2xl:grid-cols-4
+        sm:grid-cols-1
+        lg:grid-cols-2
+        2xl:grid-cols-3
         mt-6
       "
     >

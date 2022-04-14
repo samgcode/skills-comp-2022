@@ -1,48 +1,62 @@
 [
   {
-    "name": "john",
-    "text": "this is a review hello yes this is a review hello yes this is a review hello yes this is a review hello yes this is a review hello yes this is a review hello yes",
-    "rating": 1,
-    "product": "1"
-  },{
-    "name": "john",
-    "text": "this is a review hello yes",
-    "rating": 2,
-    "product": "3"
-  },{
-    "name": "john",
-    "text": "this is a review hello yes",
-    "rating": 5,
-    "product": "5"
-  },{
-    "name": "john",
-    "text": "this is a review hello yes",
-    "rating": 4,
-    "product": "3"
-  },{
-    "name": "john",
-    "text": "this is a review hello yes",
-    "rating": 2,
-    "product": "4"
-  },{
-    "name": "john",
-    "text": "this is a review hello yes",
-    "rating": 3,
-    "product": "1"
-  },{
-    "name": "john",
-    "text": "this is a review hello yes",
-    "rating": 5,
-    "product": "2"
-  },{
-    "name": "john",
-    "text": "this is a review hello yes",
-    "rating": 1,
-    "product": "6"
-  },{
-    "name": "john",
-    "text": "this is a review hello yes",
-    "rating": 0,
-    "product": "4"
+    "name": "Crystal",
+    "product": "noItem",
+    "rating": "5",
+    "text": "Parts received. Quality is fantastic! Thank you for getting them all done so quickly. It makes a big difference to us this end."
+  },
+  {
+    "name": "Travis",
+    "product": "noItem",
+    "rating": "3",
+    "text": "Real World Modelling are the most communicative and helpful prototyping bureau out there. They delivered our fine detailed parts in record time.  One was ruined though."
+  },
+  {
+    "name": "Donna",
+    "product": "noItem",
+    "rating": "5",
+    "text": "We have just received the two components with the text and they are great, thank you very much for taking the time and effort to get this right for us, I really appreciate the lengths you have gone to and will recommend your services at every opportunity."
+  },
+  {
+    "name": "Jonathan - Local Business Owner of Weststar Doll Makers Edmonton Alberta",
+    "product": "noItem",
+    "rating": "5",
+    "text": "The service was second to none. Fast response with a quote. Follow up emails keeping me informed of order progress and delivered exactly on time. Great quality of parts created from my cad drawings.....A great company to deal with. Quick and efficient service with great co,mmunication at each stage of the process. I highly recommend them and I would definitely use them again. It's the way all companies should operate."
+  },
+  {
+    "name": "Jim",
+    "product": "noItem",
+    "rating": "5",
+    "text": "I have worked in the Formula 1 sector for 20 years and had various in-house equipment to manufacture demo and sample goods but having left to start my own venture I found Real World Modelling a great option to get my sample goods made quickly and efficiently. 🙂"
+  },
+  {
+    "name": "Sally",
+    "product": "noItem",
+    "rating": "5",
+    "text": "A good service, quick and accurate, with friendly help in resolving problems, and trust me, I have lots."
+  },
+  {
+    "name": "Sherry",
+    "product": "noItem",
+    "rating": "5",
+    "text": "Got the part, it's absolutely beautiful, you guys are super-awesome!"
+  },
+  {
+    "name": "Numa",
+    "product": "noItem",
+    "rating": "5",
+    "text": "Very quick, helpful with error trapping on print design. A good service, quick and accurate, with friendly help in resolving problems."
+  },
+  {
+    "name": "Jacquie",
+    "product": "noItem",
+    "rating": "5",
+    "text": "Very helpful with advice pre printing very prompt manufacture and delivery."
+  },
+  {
+    "name": "Stu",
+    "product": "noItem",
+    "rating": "4",
+    "text": "Just wanted to inform that we received our order a couple of days ago and all seems to be in order. Part and detail quality is good and we couldn't find any defects. \n \n We were particularly impressed with your Polypropylene -like material, Endur. It's much friendlier for simulation of plastic parts and snaps than other materials we worked with before."
   }
 ]
