@@ -22,7 +22,8 @@ module.exports = {
           DEFAULT: '#3b83f6',
           dark: '#3375de'
         },
-        dark: "#1C243B"
+        dark: "#1C243B",
+        light: "#273252",
       },
       borderWidth: {
         '3': '3px'

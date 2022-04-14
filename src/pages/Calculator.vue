@@ -1,8 +1,14 @@
 <template>
-  <error-display :error="error" :show="errorOccured" class="mb-[40Rem]"></error-display>
+  <error-display
+    :error="error"
+    :show="errorOccured"
+    class="mb-[40Rem]"
+  ></error-display>
   <div class="flex justify-center">
-    <div class="shadow-lg rounded-lg w-[800px] mb-24 mt-8 mx-3"
-    v-if="!errorOccured">
+    <div
+      class="shadow-lg rounded-lg w-[800px] mb-24 mt-8 mx-3"
+      v-if="!errorOccured"
+    >
       <form
         class="flex flex-col p-4"
         @submit.prevent="submitForm()"
@@ -134,8 +140,12 @@ export default {
       }
     },
     formChanged() {
-      if (this.validate()) {
-        this.update();
+      if (this.formData.hours < 0) {
+        this.formData.hours = 0;
+      }
+      this.validate
+      if(this.formData.selectedItem != "none") {
+        this.update()
       }
     },
     validate() {
@@ -146,17 +156,15 @@ export default {
       };
       if (this.formData.name === "") {
         this.validation.nameError = true;
-        return false;
       }
       if (this.formData.selectedItem === "none") {
         this.validation.itemError = true;
-        return false;
       }
-      if (this.formData.hours === 0) {
-        this.validation.hoursError = true;
-        return false;
+
+      if(this.formData.hours === 0) {
+        this.validation.hoursError = true
       }
-      return true;
+      return !(this.validation.nameError || this.validation.itemError || this.validation.hoursError);
     },
     update() {
       this.price = this.formData.hours * this.formData.selectedItem.price;
