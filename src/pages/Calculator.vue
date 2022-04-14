@@ -6,7 +6,7 @@
   ></error-display>
   <div class="flex justify-center">
     <div
-      class="shadow-lg rounded-lg w-[800px] mb-24 mt-8 mx-3"
+      class="shadow-lg rounded-lg max-w-[800px] w-full mb-24 mt-8 "
       v-if="!errorOccured"
     >
       <form
