@@ -19,7 +19,7 @@
               <div class="px-8 pt-8 pb-4">
                 <h1 class="text-3xl">Write a review</h1>
                 <p class="text-lg">
-                  Please use the form to write a review for one of our products
+                  Please use the form to write a review of our service
                 </p>
               </div>
               <!-- <hr class="border-primary border-3" /> -->
