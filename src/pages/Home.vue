@@ -339,7 +339,7 @@
       <h1 class="text-4xl">See what our customers are saying:</h1>
       <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
         <div>
-          <div class="flex ml-4 mt-4">
+          <div class="flex md:ml-4 mt-4">
             <h2 class="text-2xl">Jim -</h2>
             <star-rating
               :star-size="30"
