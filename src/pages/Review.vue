@@ -139,14 +139,7 @@
                 <div class="flex justify-center pt-5 pb-8">
                   <button
                     class="
-                      rounded-lg
-                      border-3 border-primary
-                      text-primary
-                      px-4
-                      h-10
-                      hover:bg-primary-superlight
-                      active:bg-primary-light
-                      transition
+                      btn-primary-outline
                     "
                     type="submit"
                     @click="submitForm()"

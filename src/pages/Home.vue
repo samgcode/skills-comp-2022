@@ -228,36 +228,10 @@
             Today's best 3D Modellers on call for you
           </h2>
           <div class="my-8">
-            <router-link
-              :to="{ name: 'About' }"
-              class="
-                bg-primary
-                p-3
-                px-6
-                rounded-md
-                transform
-                transition
-                hover:-translate-y-0.5 hover:bg-primary-light
-                active:bg-primary-superlight
-                font-semibold
-                hover:shadow-md hover:shadow-primary-dark
-              "
+            <router-link :to="{ name: 'About' }" class="btn-primary"
               >About us</router-link
             >
-            <router-link
-              :to="{ name: 'Store' }"
-              class="
-                ml-4
-                py-2.5
-                px-6
-                border-2 border-white
-                hover:bg-gray-700
-                active:bg-gray-500
-                rounded-md
-                inset-1
-                text-white
-                hover:shadow-md hover:shadow-white
-              "
+            <router-link :to="{ name: 'Store' }" class="ml-4 btn-white-outline"
               >Services</router-link
             >
           </div>
@@ -279,17 +253,7 @@
       <div class="mt-5">
         <router-link
           to="/Calculator"
-          class="
-            text-primary
-            p-2
-            rounded-md
-            font-bold
-            border-4 border-primary
-            transition
-            hover:bg-red-100
-            active:bg-red-300
-            hover:shadow-md hover:shadow-primary
-          "
+          class="btn-primary-outline"
           data-aos="fade-down"
         >
           Calculator
@@ -315,17 +279,7 @@
         <div class="mt-6">
           <router-link
             to="/Store"
-            class="
-              text-primary
-              p-2
-              rounded-md
-              font-bold
-              border-4 border-primary
-              transition
-              hover:bg-red-100
-              active:bg-red-300
-              hover:shadow-md hover:shadow-primary
-            "
+            class="btn-primary-outline"
             data-aos="fade-down"
           >
             See all services
@@ -377,21 +331,7 @@
           </p>
         </div>
         <div class="h-full flex flex-wrap content-center lg:pt-0 pt-4">
-          <button
-            class="
-              transition
-              bg-primary
-              rounded-lg
-              font-bold
-              h-12
-              px-3
-              hover:bg-primary-light hover:shadow-md hover:shadow-primary
-              active:bg-primary-superlight
-              active:shadow-md
-              active:shadow-primary
-            "
-            @click="showModal"
-          >
+          <button class="btn-primary" @click="showModal">
             See more reviews
           </button>
         </div>

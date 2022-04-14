@@ -74,15 +74,7 @@
           <h1 class="my-auto text-xl pr-5">Aproximate quote: ${{ price }}</h1>
           <button
             class="
-              border-4 border-primary
-              text-primary
-              p-1
-              transition
-              rounded-lg
-              font-bold
-              shadow-lg
-              hover:bg-red-200 hover:shadow-primary hover:shadow-md
-              active:bg-red-300
+              btn-primary-outline
             "
             @click="submitForm()"
             v-if="!loading"

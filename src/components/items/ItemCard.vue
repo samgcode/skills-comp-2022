@@ -1,6 +1,6 @@
 
 <template>
-  <div class="rounded-md shadow-lg w-[30rem]">
+  <div class="rounded-md shadow-lg xl:w-[25rem] w-96">
     <div @mouseover="hover = true" @mouseleave="hover = false">
       <img
         @click="openReviewForm()"
@@ -36,7 +36,7 @@
       <h1 class="text-gray-500 flex flex-col" v-if="!showLongDescription">
         {{ description }} ...
         <button
-          class="font-bold text-xl hover:text-primary text-blue-600"
+          class="btn"
           @click="showLongDescription = !showLongDescription"
         >
           show more
@@ -45,7 +45,7 @@
       <h1 class="text-gray-500 flex flex-col" v-if="showLongDescription">
         {{ longDescription }}
         <button
-          class="font-bold text-xl hover:text-primary text-blue-600"
+          class="btn"
           @click="showLongDescription = !showLongDescription"
         >
           close
@@ -118,5 +118,11 @@ export default {
   left: 50%;
   top: 33%;
   transform: translate(-33%, -50%);
+}
+</style>
+
+<style scoped>
+.btn {
+  @apply font-bold text-xl hover:text-primary text-blue-600 transition hover:underline
 }
 </style>

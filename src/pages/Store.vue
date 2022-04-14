@@ -2,18 +2,10 @@
   <div class="pb-20">
     <div class="flex flex-col justify-center text-center pt-5">
       <h1 class="text-4xl text-black">Our Services</h1>
-      <div class="flex gap-4 justify-center pt-3 content-center">
+      <div class="flex gap-4 justify-center pt-3 content-center w-full">
         <router-link
           :to="{ name: 'Review', params: { item: 'none' } }"
-          class="
-            border-4 border-primary
-            p-2
-            rounded-md
-            text-primary
-            shadow-lg
-            hover:bg-red-100 hover:shadow-md hover:shadow-primary
-            active:bg-primary-superlight active:shadow-md active:shadow-primary
-          "
+          class="btn-primary-outline"
           >Write a review</router-link
         >
         <button
@@ -36,7 +28,8 @@
     <error-display :error="error" :show="errorOccured"></error-display>
     <div
       class="
-        grid grid-cols-1 gap-6
+        grid grid-cols-1
+        gap-6
         w-[80%]
         mx-auto
         sm:grid-cols-1
