@@ -19,7 +19,7 @@
         />
         <div data-aos="fade-left">
           <h1 class="mt-20 text-4xl font-bold">Make new things possible</h1>
-          <h2 class="text-lg max-w-md border-l-3 border-primary pl-2 ml-1">
+          <h2 class="text-lg max-w-xl border-l-3 border-primary pl-2 ml-1">
             Design is important, not just for the things it makes, but for the
             things it makes possible in the world. What engineers design and
             produce is what keeps us safe, healthy, and connected. But here's
@@ -93,11 +93,11 @@
       </div>
     </div>
     <div class="text-center w-full flex justify-center pt-12">
-      <div class="flex flex-col">
+      <div class="flex flex-col max-w-full">
         <h1 class="text-3xl" data-aos="fade-left">
           Real World Modelling is on a mission
         </h1>
-        <h2 class="text-xl w-[35rem] text-gray-500" data-aos="fade-right">
+        <h2 class="text-xl w-[35rem] text-gray-500 max-w-full" data-aos="fade-right">
           A mission to change design, manufacturing and logistics for the
           better. We combined our expert team and a lot of 3D printers to make
           the entire process smarter and easier. We're making new things
