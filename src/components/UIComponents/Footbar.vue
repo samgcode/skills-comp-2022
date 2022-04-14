@@ -18,16 +18,16 @@
           data-aos-delay="100"
         >
           <h1 class="text-2xl">Address</h1>
-          <h2 class="text-lg">22 1139 AVE NW</h2>
-          <h2 class="text-lg">Edmonton AB T5M 2N0</h2>
+          <h2 class="text-lg">3120 12 AVE North</h2>
+          <h2 class="text-lg">LETHBRIDGE AB T1H 5V1</h2>
         </div>
         <div
           class="text-white text-left max-w-md"
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          <h1 class="text-lg">info@greenthumblanscaping.com</h1>
-          <h2 class="text-lg">780.302.0635</h2>
+          <h1 class="text-lg">info@RealWorldModelling.com</h1>
+          <h2 class="text-lg">403-302-0635</h2>
         </div>
       </div>
     </div>

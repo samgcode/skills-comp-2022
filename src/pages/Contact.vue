@@ -3,7 +3,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4" data-aos="fade-up">
       <div class="w-full rounded-lg shadow-lg">
         <div class="px-8 pt-8 w-96">
-          <h1 class="text-3xl pb-2">Contact RapidAir</h1>
+          <h1 class="text-3xl pb-2">Contact Real World Modeling</h1>
         </div>
         <div class="text-xl px-4 bg-white max-w-full">
           <form @submit.prevent="submitForm()" @change="validateForm">
@@ -115,11 +115,24 @@
         </div>
       </div>
       <div class="w-full rounded-lg shadow-lg">
-        <div class="px-8 pt-8 w-96">
-          <h1 class="text-3xl pb-2">Our locations</h1>
+        <!-- <div class="px-8 pt-8 w-96">
+          <h1 class="text-3xl pb-2">title</h1>
+        </div> -->
+        <div class="text-xl px-4 bg-white max-w-md">
+          At every stage of every project we take on, we believe communication
+          is key.
         </div>
-        <div class="text-xl px-4 bg-white max-w-full">
-          <location-map :btnText="Map" class="p-5" />
+        <div class="text-xl px-4 bg-white max-w-md pt-4">
+          So whether you have a question about our services or you’d like a
+          quote, send us a note to discuss the details. It’s always
+          no-obligation, so don’t worry about it!
+        </div>
+        <div class="text-xl px-4 bg-white max-w-md pt-4">
+          It all begins with an idea… <br>
+          3120 12 AVE North <br>
+          LETHBRIDGE AB T1H 5V1 <br>
+          info@RealWorldModelling.com <br>
+          403.302.0635
         </div>
       </div>
     </div>
