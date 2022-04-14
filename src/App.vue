@@ -32,10 +32,13 @@ export default {
 
 <style>
 .btn-primary {
-  @apply rounded-md transform transition hover:-translate-y-0.5 hover:bg-primary-light active:bg-primary-superlight font-semibold hover:shadow-md hover:shadow-primary-dark bg-primary p-3 px-6;
+  @apply rounded-md transform transition hover:bg-primary-light active:bg-primary-superlight font-semibold hover:shadow-md hover:shadow-primary-dark bg-primary p-3 px-6;
 }
 .btn-primary-outline {
   @apply text-primary p-2 py-1.5 rounded-md font-bold border-4 border-primary transition hover:bg-red-100 active:bg-red-300 hover:shadow-md hover:shadow-primary
+}
+.btn-secondary {
+  @apply rounded-md transform transition  bg-blue-500 hover:bg-blue-200 active:bg-blue-100 font-semibold hover:shadow-md hover:shadow-blue-600 p-3 px-6;
 }
 .btn-white-outline {
   @apply py-2.5 px-6 border-2 border-white hover:bg-gray-700 active:bg-gray-500 rounded-md inset-1 text-white hover:shadow-md hover:shadow-white

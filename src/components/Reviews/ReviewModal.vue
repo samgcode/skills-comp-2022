@@ -1,5 +1,11 @@
 <template>
-  <div class="fixed overflow-hidden z-10 inset-0" v-show="showReviews">
+  <div
+    class="fixed z-10 inset-0 overflow-y-auto"
+    aria-labelledby="modal-title"
+    role="dialog"
+    aria-modal="true"
+    v-show="showReviews"
+  >
     <div
       class="
         flex
@@ -11,14 +17,13 @@
         pb-20
         text-center
         sm:block sm:p-0
-        overflow-hidden
       "
     >
-      <div class="fixed inset-0 transition-opacity" aria-hidden="true">
-        <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-      </div>
+      <div
+        class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+        aria-hidden="true"
+      ></div>
 
-      <!-- This element is to trick the browser into centering the modal contents. -->
       <span
         class="hidden sm:inline-block sm:align-middle sm:h-screen"
         aria-hidden="true"
@@ -27,6 +32,7 @@
 
       <div
         class="
+          relative
           inline-block
           align-bottom
           bg-white
@@ -38,167 +44,105 @@
           transition-all
           sm:my-8 sm:align-middle sm:max-w-lg sm:w-full
         "
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="modal-headline"
       >
         <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-          <div class="sm:flex sm:items-start justify-between">
+          <div class="sm:flex sm:items-start">
             <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-              <h3
-                class="text-lg leading-6 font-medium text-gray-900"
-                id="modal-headline"
-              >
-                Here are some reviews for our company
-              </h3>
-            </div>
-            <button
-              type="button"
-              @click="closeModal()"
-              class="
-                focus:outline-none focus:ring-2
-                ring-secondary ring-offset-8
-                rounded-sm
-                hover:fill-black
-                fill-current
-              "
-            >
-              <svg
-                class="h-4"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="gray"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="3"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="
-              mt-2
-              flex-row
-              grid-cols-1
-              xl:h-2xl
-              md:h-96
-              overflow-auto
-              mb-20
-            "
-          >
-            <!-- <error-display :error="error" :show="showError"></error-display>
-            <square-spinner :loading="loading"></square-spinner> -->
-            <error-display :error="error" :show="showError"></error-display>
-            <loading :loading="loading" class="pt-5"></loading>
-            <div v-if="!showError">
-              <div v-if="hasReviews">
-                <review-card
-                  v-for="review in reviews"
-                  v-bind:key="review.id"
-                  :review="review"
-                />
+              <div class="flex justify-between">
+                <h3
+                  class="
+                    text-lg
+                    font-semibold
+                    text-gray-900
+                    lg:text-2xl
+                    dark:text-white
+                  "
+                >
+                  Here are some reviews for our company
+                </h3>
+                <button
+                  type="button"
+                  @click="closeModal()"
+                  class="
+                    focus:outline-none focus:ring-2
+                    ring-secondary ring-offset-8
+                    rounded-sm
+                    hover:fill-black
+                    fill-current
+                  "
+                >
+                  <svg
+                    class="h-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="gray"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
               </div>
-              <div v-if="!hasReviews && !loading">
-                <div class="flex max-w-7xl" data-aos="fade-up">
-                  <div class="pt-5 sm:pl-9">
-                    <div
-                      class="
-                        max-w-sm
-                        w-96
-                        rounded-lg
-                        overflow-hidden
-                        shadow-lg
-                        bg-white
-                        border-2
-                      "
-                    >
-                      <div class="px-4 py-4">
-                        <h1 class="text-xl">No reviews are currently available</h1>
-                        <p class="text-gray-500 text-md">
-                          You can submit one on the store page
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+              <div class="mt-2">
+                <p class="text-sm text-gray-500 max-h-96 overflow-y-scroll">
+                  <error-display
+                    :error="error"
+                    :show="showError"
+                  ></error-display>
+                  <loading :loading="loading" class="pt-5"></loading>
+                  <review-card
+                    v-for="review in reviews"
+                    v-bind:key="review.id"
+                    :review="review"
+                  />
+                </p>
+                <div v-if="!hasReviews && !loading">
+                  <review-card :review="emptyReview" />
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div
-          class="
-            bg-gray-50
-            px-4
-            py-3
-            sm:px-6 sm:flex sm:flex-row-reverse
-            absolute
-            inset-x-0
-            bottom-0
-          "
-        >
+        <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
           <button
+            @click="closeModal"
             type="button"
-            @click="closeModal()"
             class="
-              mt-3
-              w-full
-              inline-flex
-              justify-center
+              modal-button
+              md:ml-5
+              text-blue-500
+              p-2
               rounded-md
-              cursor-pointer
-              px-5
-              py-2
-              shadow-lg
-              bg-gray-50
-              text-secondary
-              font-semibold
-              tracking-wider
-              border-4 border-secondary
-              transform
+              font-bold
+              border-4 border-blue-500
               transition
-              hover:-translate-y-0.5 hover:bg-secondary-superlight
-              focus:-translate-y-0.5
-              focus:outline-none
-              focus:ring
-              focus:ring-offset-1
-              focus:ring-primary
-              active:-translate-y-0.5
-              sm:ml-3 sm:w-auto
+              hover:bg-blue-100
+              active:bg-blue-300
+              hover:shadow-md hover:shadow-blue-300
             "
           >
             Close
           </button>
           <button
             type="button"
-            @click="openReviewForm()"
+            @click="openReviewForm"
             class="
-              mt-3
-              w-full
-              inline-flex
-              justify-center
+              modal-button
               rounded-md
-              sm:ml-3 sm:w-auto
-              cursor-pointer
-              px-5
-              py-3
-              shadow-lg
-              bg-primary
-              font-semibold
-              tracking-wider
               transform
               transition
-              hover:-translate-y-0.5 hover:bg-primary-dark
-              focus:-translate-y-0.5
-              focus:outline-none
-              focus:ring
-              focus:ring-offset-1
-              focus:ring-secondary
-              active:bg-primary-light
+              hover:bg-primary-light
+              active:bg-primary-superlight
+              font-semibold
+              hover:shadow-md hover:shadow-primary-dark
+              bg-primary
+              p-3
+              px-6
             "
           >
             Write a review
@@ -231,7 +175,12 @@ export default {
     ErrorDisplay,
   },
   data() {
-    return {};
+    return {
+      emptyReview: {
+        name: "There are no reviews Currently available",
+        text: "You can submit one on the store page",
+      },
+    };
   },
   methods: {
     closeModal() {
@@ -241,10 +190,16 @@ export default {
       this.$router.push({
         name: `Review`,
         params: {
-          item: 'noItem',
+          item: "noItem",
         },
       });
     },
   },
 };
 </script>
+
+<style scoped>
+.modal-button {
+  @apply m-2 sm:w-auto inline-flex w-full justify-center;
+}
+</style>

@@ -19,9 +19,10 @@
               class=""
               :read-only="true"
               :show-rating="false"
-              :rating="rating"
+              :rating="parseInt(rating)"
               :star-size="22"
               :active-color="primaryColor"
+              v-if="parseInt(rating)"
             ></star-rating>
           </div>
           <p class="text-gray-500 text-sm">
